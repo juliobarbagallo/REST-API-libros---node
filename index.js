@@ -4,9 +4,9 @@ var app = express();
 var db = require('./db');
 
 // El archivo que tiene todo el armado de la Rest API
-var librosController = require('./libros/LibrosController');
+var MainController = require('./libros/MainController');
 // La Rest API queda en /api/
-app.use('/api', librosController);
+app.use('/api', MainController);
 
 var port = "8181";
 
