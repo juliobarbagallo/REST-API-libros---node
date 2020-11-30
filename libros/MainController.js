@@ -63,7 +63,8 @@ router.get('/editorial/:publisher', function (req, res) {
         // dentro del from es el schema que tiene editoriales.
         // y el foreign key es con quien de la coleccion editoriales, en este caso la key id, se va a vincular
         // con la de libros.
-        // as, todo va a quedar en editoriales, para despues usarlo en el unwind, donde seleccionamos con 0 y 1 los campos que ueremos traer
+        // as, todo va a quedar en editoriales, para despues usarlo en el unwind, donde seleccionamos
+        //  con 0 y 1 los campos que ueremos traer
         // para que todo quede en el array data
         dbo.collection('libros').aggregate([ 
             { $lookup:
